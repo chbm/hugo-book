@@ -1,0 +1,19 @@
+{{ define "main" }}
+<main aria-role="main">
+	
+<article class="markdown">
+  {{- .Content -}}
+</article>
+
+<div class="book-columns flex flex-wrap">
+  <div class="flex-even markdown-inner">
+		{{ partial "docs/article" (index (first 1 .Site.Pages) 0) }}
+	</div>
+
+  <div class="flex-even markdown-inner">
+		{{ partial "docs/article" (.Site.GetPage "/foreword")}}
+		{{ partial "docs/article" (.Site.GetPage "/colophon")}}
+	</div>
+
+</main>
+{{ end }}

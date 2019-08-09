@@ -1,7 +1,16 @@
 {{ define "main" }}
+
+<h2>{{ .Title }}</h2>
+
 <article class="markdown">
   {{- .Content -}}
 </article>
+
+{{ range .Pages }}
+<h3>{{ .Title }}</h3>
+  {{ .Content }}
+{{ end }}
+
 {{ end }}
 
 {{ define "toc" }}

@@ -1,0 +1,8 @@
+
+{{ range first 1 .Site.Pages }}
+<h3>
+	<a href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a>
+	<a href="{{ .RelPermalink}}">{{ .Title }}</a></h3>
+		{{ .Summary }} 
+	<a href="{{ .Permalink }}">...</a>
+{{ end }}

@@ -1,9 +1,17 @@
 {{ define "main" }}
-<h2>{{ .Parent.Title }} </h2>
-<h3>{{ .Title }}</h3>
+
+<h2>{{ .Title }}</h2>
+_default tit
+
 <article class="markdown">
   {{- .Content -}}
 </article>
+
+{{ range .Pages }}
+<h3> {{ .Parent.Title }}{{ .Title }}</h3>
+  {{ .Content }}
+{{ end }}
+
 {{ end }}
 
 {{ define "toc" }}

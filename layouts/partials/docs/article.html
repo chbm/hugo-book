@@ -1,0 +1,7 @@
+<h3>
+	{{with .Parent}}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{end}}
+	<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+</h3>
+<article class="markdown">
+  {{- .Content -}}
+</article>

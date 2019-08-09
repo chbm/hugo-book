@@ -1,6 +1,6 @@
-<header class="flex align-center justify-between book-header">
+<header class="align-center justify-between book-header">
   <label for="menu-control">
     <img src="{{ "svg/menu.svg" | relURL }}" alt="Menu" />
   </label>
-  <strong>{{ partial "docs/title" . }}</strong>
+  <strong>{{- template "title" . }}</strong>
 </header>
