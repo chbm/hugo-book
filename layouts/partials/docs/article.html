@@ -1,5 +1,5 @@
 <h3>
-	{{with .Parent}}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{end}}
+	{{if eq .Parent.Type "docs"}}<a href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a>{{end}}
 	<a href="{{ .RelPermalink }}">{{ .Title }}</a>
 </h3>
 <article class="markdown">

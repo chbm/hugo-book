@@ -5,15 +5,16 @@
   {{- .Content -}}
 </article>
 
-<div class="book-columns flex flex-wrap">
-  <div class="flex-even markdown-inner">
+  <div class="">
+		<h3 >latest part: </h3>
 		{{ partial "docs/article" (index (first 1 .Site.Pages) 0) }}
 	</div>
 
-  <div class="flex-even markdown-inner">
+	<hr />
+  <aside class=" abouts">
 		{{ partial "docs/article" (.Site.GetPage "/foreword")}}
 		{{ partial "docs/article" (.Site.GetPage "/colophon")}}
-	</div>
+	</aside>
 
 </main>
 {{ end }}
