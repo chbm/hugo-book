@@ -7,11 +7,11 @@
 
   <div class="">
 		<h3 >latest part: </h3>
-		{{ partial "docs/article" (index (first 1 .Site.Pages) 0) }}
+		{{ partial "docs/article" (index (last 1 (where .Site.Pages "Kind" "page").ByDate) 0) }}
 	</div>
 
-	<hr />
   <aside class=" abouts">
+		<hr />
 		{{ partial "docs/article" (.Site.GetPage "/foreword")}}
 		{{ partial "docs/article" (.Site.GetPage "/colophon")}}
 	</aside>
