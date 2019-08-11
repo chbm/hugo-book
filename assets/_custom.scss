@@ -4,6 +4,12 @@
 body {
 	background: #f0f0f0;
 	color: #1f1f1f;
+	font-family: Helvetica Neue, Helvetica, Verdana;
+}
+
+h1.book-brand {
+	display: table-caption;
+	font-family: monospace;
 }
 
 a:link, a:hover, a:active, a:visited {
@@ -12,8 +18,16 @@ a:link, a:hover, a:active, a:visited {
 	text-decoration: underline;
 }
 
+.book-brand > a:link {
+	text-decoration: none;
+}
+
 .abouts {
 	font-size: 0.8em;
+}
+
+.abouts > hr {
+	margin-top: 12em;
 }
 
 .small-print {
